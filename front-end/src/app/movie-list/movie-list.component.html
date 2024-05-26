@@ -1,0 +1,13 @@
+<div class="movie-list">
+  <mat-card *ngFor="let movie of movies" class="movie-card">
+    <img mat-card-image [src]="getMoviePosterUrl(movie.poster_path)" alt="{{ movie.title }}">
+    <mat-card-content class="movie-details">
+      <h6 mat-card-title>{{ movie.title }}</h6>
+      <div class="button-container">
+        <button mat-flat-button color="accent" (click)="verDetalhes(movie.id)">Ver Detalhes</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<mat-paginator class="movie-pages" [length]="totalMovies" [pageSize]="pageSize" (page)="onPageChange($event)"></mat-paginator>

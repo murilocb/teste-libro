@@ -1,0 +1,39 @@
+.movie-details {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  text-align: center;
+}
+
+.movie-poster {
+  margin-bottom: 20px;
+}
+
+.actions {
+  justify-content: center;
+}
+
+.movie-details img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.movie-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-details ul li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}

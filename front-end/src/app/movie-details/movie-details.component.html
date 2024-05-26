@@ -1,0 +1,17 @@
+<mat-card *ngIf="movie" class="movie-details">
+  <mat-card-content class="content">
+    <img mat-card-image class="movie-poster" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
+    <h1 mat-card-title>{{ movie.title }}</h1>
+    <p>{{ movie.overview }}</p>
+    <ul>
+      <li><strong>Release Date:</strong> {{ movie.release_date }}</li>
+      <li><strong>Rating:</strong> {{ movie.vote_average }}</li>
+      <li><strong>Runtime:</strong> {{ movie.runtime }} minutes</li>
+      <li><strong>Genres:</strong> <span *ngFor="let genre of movie.genres"> {{ genre.name }}</span></li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions class="actions">
+    <button mat-flat-button color="accent" (click)="goBack()">Voltar</button>
+  </mat-card-actions>
+</mat-card>
+
